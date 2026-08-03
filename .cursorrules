@@ -1,0 +1,9 @@
+{
+  "rules": [
+    "Always follow the Light Blue & White premium design system.",
+    "Page background: #F8FAFC / #FFFFFF, Accent: Electric Blue (#2563EB / #3B82F6), Text: Graphite (#0F172A). Never use #000000.",
+    "All cards MUST use rounded-2xl, border border-slate-200/80, soft ambient shadow (shadow-sm), and hover animations (hover:-translate-y-1 hover:shadow-xl transition-all duration-300).",
+    "Use Framer Motion for animations on all components.",
+    "Do not write minimalist bare templates. Build rich, structured, conversion-driven UI components with content, badges, and metrics."
+  ]
+}
