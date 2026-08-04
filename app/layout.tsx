@@ -10,13 +10,13 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase: new URL(origin),
-    title: "ALTYN School — Химия олимпиадасына жүйелі дайындық",
-    description: "Химиядан Республикалық олимпиадаға жүйелі дайындық беретін заманауи онлайн мектеп.",
-    icons: { icon: "/altyn-logo.jpg", shortcut: "/altyn-logo.jpg" },
+    title: "ALTYN School — Олимпиадаға жүйелі дайындық",
+    description: "Республикалық пән олимпиадаларына жүйелі дайындық беретін заманауи онлайн мектеп.",
+    icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
     openGraph: {
       title: "ALTYN School",
-      description: "Химия олимпиадасына жүйелі дайындық",
-      images: [{ url: `${origin}/og.png`, width: 1732, height: 908, alt: "ALTYN School" }],
+      description: "Республикалық пән олимпиадаларына жүйелі дайындық",
+      images: [{ url: `${origin}/og.png`, width: 1731, height: 908, alt: "ALTYN Olympiad School" }],
       locale: "kk_KZ",
       type: "website",
     },

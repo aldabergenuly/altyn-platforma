@@ -11,11 +11,12 @@ export function FadeIn({ children, className = "", delay = 0 }: { children: Reac
 
 export function Logo({ light = false }: { light?: boolean }) {
   return (
-    <a href="#top" className="group flex items-center gap-3" aria-label="ALTYN School басты бет">
-      <span className="grid size-10 place-items-center rounded-xl bg-gradient-to-br from-amber-300 to-amber-500 text-lg font-black text-white shadow-lg shadow-amber-200/60 transition-transform duration-300 group-hover:-rotate-3 group-hover:scale-105">A</span>
-      <span className="flex flex-col leading-none">
-        <b className={`text-lg font-black tracking-[0.16em] ${light ? "text-white" : "text-slate-900"}`}>ALTYN</b>
-        <small className={`mt-1 text-[8px] font-semibold tracking-[0.12em] ${light ? "text-slate-400" : "text-slate-500"}`}>CHEMISTRY OLYMPIAD</small>
+    <a href="#top" className="group inline-flex min-w-[9.5rem] flex-col leading-none" aria-label="ALTYN Olympiad School басты бет">
+      <b className="text-[1.65rem] font-black tracking-[0.09em] text-amber-500 transition-colors duration-300 group-hover:text-amber-400">ALTYN</b>
+      <span className={`mt-1 flex items-center gap-1.5 text-[7px] font-extrabold tracking-[0.16em] ${light ? "text-slate-300" : "text-slate-700"}`}>
+        <span>OLYMPIAD</span>
+        <span className={`h-px w-5 ${light ? "bg-slate-500" : "bg-slate-400"}`} aria-hidden="true" />
+        <span>SCHOOL</span>
       </span>
     </a>
   );
