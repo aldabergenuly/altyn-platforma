@@ -11,7 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(origin),
     title: "ALTYN School — Химия олимпиадасына жүйелі дайындық",
-    description: "Қазақстандағы химия олимпиадалары мен академиялық емтихандарға арналған заманауи онлайн мектеп.",
+    description: "Химиядан Республикалық олимпиадаға жүйелі дайындық беретін заманауи онлайн мектеп.",
     icons: { icon: "/altyn-logo.jpg", shortcut: "/altyn-logo.jpg" },
     openGraph: {
       title: "ALTYN School",

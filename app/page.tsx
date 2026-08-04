@@ -4,6 +4,7 @@ import StatsBar from "./components/StatsBar";
 import LMSPreview from "./components/LMSPreview";
 import Features from "./components/Features";
 import StudentCases from "./components/StudentCases";
+import OlympiadCountdown from "./components/OlympiadCountdown";
 import Pricing from "./components/Pricing";
 import FAQ from "./components/FAQ";
 import ContactForm from "./components/ContactForm";
@@ -18,6 +19,7 @@ export default function Home() {
       <LMSPreview />
       <Features />
       <StudentCases />
+      <OlympiadCountdown />
       <Pricing />
       <FAQ />
       <ContactForm />

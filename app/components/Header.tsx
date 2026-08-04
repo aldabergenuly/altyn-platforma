@@ -1,28 +1,7 @@
 "use client";
-
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Logo } from "./shared";
-
-const links = [["Платформа", "#platform"], ["Артықшылықтар", "#features"], ["Нәтижелер", "#results"], ["Тарифтер", "#pricing"], ["FAQ", "#faq"]];
-
-export default function Header() {
-  const [open, setOpen] = useState(false);
-  return (
-    <motion.header initial={{ y: -80 }} animate={{ y: 0 }} transition={{ duration: .6 }} className="fixed inset-x-0 top-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-xl">
-      <div className="site-container flex h-[76px] items-center gap-8">
-        <Logo />
-        <nav className="hidden flex-1 items-center justify-center gap-7 lg:flex" aria-label="Негізгі навигация">
-          {links.map(([label, href]) => <a key={href} href={href} className="text-sm font-semibold text-slate-600 transition-colors hover:text-blue-600">{label}</a>)}
-        </nav>
-        <div className="ml-auto hidden items-center gap-3 sm:flex">
-          <a href="#platform" className="rounded-xl border border-blue-200 bg-white px-4 py-2.5 text-sm font-bold text-blue-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-400 hover:shadow-lg">LMS-ке кіру</a>
-          <a href="#contact" className="primary-button !px-5 !py-3">Курсқа қосылу</a>
-        </div>
-        <button onClick={() => setOpen(!open)} className="ml-auto grid size-11 place-items-center rounded-xl border border-slate-200 bg-white text-slate-800 sm:hidden" aria-label="Мәзір" aria-expanded={open}>{open ? <X size={20} /> : <Menu size={20} />}</button>
-      </div>
-      <AnimatePresence>{open && <motion.nav initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} className="border-t border-slate-100 bg-white px-5 pb-5 sm:hidden">{links.map(([label, href]) => <a key={href} onClick={() => setOpen(false)} href={href} className="block border-b border-slate-100 py-4 text-sm font-bold text-slate-700">{label}</a>)}<a href="#contact" onClick={() => setOpen(false)} className="primary-button mt-5 w-full">Курсқа қосылу</a></motion.nav>}</AnimatePresence>
-    </motion.header>
-  );
-}
+const links = [["Артықшылықтар", "#features"], ["Платформа", "#platform"], ["Оқушылар нәтижесі", "#results"], ["Тарифтер", "#pricing"]];
+export default function Header() { const [open,setOpen]=useState(false); return <motion.header initial={{y:-90,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:.65}} className="fixed inset-x-0 top-4 z-50 px-3"><div className="mx-auto flex h-[72px] max-w-[1220px] items-center gap-8 rounded-[1.6rem] border border-white/80 bg-white/90 px-5 shadow-[0_18px_55px_rgba(15,23,42,.10)] backdrop-blur-xl sm:px-7"><Logo/><span className="hidden text-[10px] font-medium text-slate-400 xl:block">Республикалық олимпиадаға дайындық</span><nav className="hidden flex-1 items-center justify-center gap-8 lg:flex">{links.map(([l,h])=><a key={h} href={h} className="text-sm font-semibold text-slate-600 transition hover:text-blue-600">{l}</a>)}</nav><div className="ml-auto hidden items-center gap-3 sm:flex"><a href="#platform" className="rounded-xl border border-blue-200 px-4 py-2.5 text-xs font-bold text-blue-700">LMS-ке кіру</a><a href="#contact" className="primary-button !px-5 !py-3">Курсқа қосылу</a></div><button onClick={()=>setOpen(!open)} className="ml-auto grid size-11 place-items-center rounded-xl border border-slate-200 bg-white sm:hidden" aria-label="Мәзір">{open?<X size={20}/>:<Menu size={20}/>}</button></div><AnimatePresence>{open&&<motion.nav initial={{opacity:0,y:-8}} animate={{opacity:1,y:0}} exit={{opacity:0,y:-8}} className="mx-auto mt-2 rounded-2xl border border-slate-100 bg-white p-4 shadow-2xl sm:hidden">{links.map(([l,h])=><a key={h} href={h} onClick={()=>setOpen(false)} className="block border-b border-slate-100 px-2 py-4 text-sm font-bold">{l}</a>)}<a href="#contact" onClick={()=>setOpen(false)} className="primary-button mt-4 w-full">Курсқа қосылу</a></motion.nav>}</AnimatePresence></motion.header> }
