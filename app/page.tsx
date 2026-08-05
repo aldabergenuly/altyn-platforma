@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main id="top" className="overflow-hidden bg-slate-50 text-slate-900">
+    <main id="top" className="overflow-hidden bg-[#f1f2f4] text-[#1d1d1d]">
       <Header />
       <Hero />
       <StatsBar />
