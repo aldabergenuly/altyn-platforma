@@ -11,16 +11,16 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(origin),
     title: "ALTYN School — Олимпиадаға жүйелі дайындық",
-    description: "Республикалық пән олимпиадаларына жүйелі дайындық беретін заманауи онлайн мектеп.",
+    description: "Күшті тренерлермен Республикалық пән олимпиадаларына жүйелі дайындық.",
     icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
     openGraph: {
       title: "ALTYN School",
-      description: "Республикалық пән олимпиадаларына жүйелі дайындық",
-      images: [{ url: `${origin}/og.png`, width: 1731, height: 908, alt: "ALTYN Olympiad School" }],
+      description: "Күшті тренерлермен Республикалық пән олимпиадаларына жүйелі дайындық",
+      images: [{ url: `${origin}/coaches-v1.jpg`, width: 1792, height: 896, alt: "ALTYN Olympiad School тренерлері" }],
       locale: "kk_KZ",
       type: "website",
     },
-    twitter: { card: "summary_large_image", images: [`${origin}/og.png`] },
+    twitter: { card: "summary_large_image", images: [`${origin}/coaches-v1.jpg`] },
   };
 }
 

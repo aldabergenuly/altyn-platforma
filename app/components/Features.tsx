@@ -1,21 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Activity, BrainCircuit, Clock3, ClipboardCheck, Medal, MessagesSquare } from "lucide-react";
+import { Activity, BrainCircuit, ClipboardCheck, Medal, MessagesSquare, Route } from "lucide-react";
 import { FadeIn, SectionHeading } from "./shared";
 
 const features = [
-  [ClipboardCheck,"Олимпиадалық сынақ","Апта сайын нақты олимпиада форматындағы сынақ пен толық талдау.","blue"],
-  [Activity,"Жеке прогресс","Әлсіз тақырыптарды көріп, өсу динамикасын нақты метрикамен бақыла.","white"],
-  [MessagesSquare,"Жеке ментор","Жоспар, мотивация және күрделі есептер бойынша тұрақты қолдау.","dark"],
-  [BrainCircuit,"Терең пәндік база","Пәнді жаттамай, идеялар мен заңдылықтарды өзара байланысты жүйе ретінде түсіну.","white"],
-  [Medal,"Жеңімпаздар ортасы","Мақсаты биік оқушылармен бірге дамып, жоғары стандарт қалыптастыру.","blue"],
-  [Clock3,"24/7 қолжетімділік","Сабақ пен материалдар кез келген уақытта барлық құрылғыда ашық.","dark"],
+  [ClipboardCheck,"Олимпиада форматы","Уақыт, бағалау және есеп күрделілігі нақты турға жақын сынақтар.","blue"],
+  [Activity,"Қателер картасы","Әр жұмыстан кейін қай тақырыпты күшейту керегін нақты анықтаймыз.","white"],
+  [MessagesSquare,"Тренер кері байланысы","Шешімнің жауабын ғана емес, ойлау жолын бірге талдаймыз.","dark"],
+  [BrainCircuit,"Терең пәндік база","Формуланы жаттамай, заңдылықты түсініп қолдануға үйретеміз.","white"],
+  [Medal,"Олимпиадалық орта","Мақсаты бір оқушылармен бірге жоғары стандартта дайындаласың.","blue"],
+  [Route,"Жеке маршрут","Диагностика нәтижесіне қарай тақырыптардың реті мен қарқыны өзгереді.","dark"],
 ] as const;
 
 export default function Features() {
   return <section id="features" className="section-space bg-[#f1f2f4]"><div className="site-container">
-    <SectionHeading eyebrow="НЕЛІКТЕН ALTYN?" title="ALTYN-ның басты" accent="артықшылықтары" description="Білім, бақылау және қолдау бір жүйеге біріктірілгенде тұрақты нәтиже пайда болады."/>
+    <SectionHeading eyebrow="НЕЛІКТЕН ALTYN?" title="Дайындықты күшейтетін" accent="6 қағида" description="Жаңа мектеп үшін басты дәлел — жалған статистика емес, түсінікті әдістеме мен мықты тренерлік жұмыс."/>
     <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">{features.map(([Icon,title,copy,theme],i) => {
       const dark=theme==="dark", blue=theme==="blue";
       return <FadeIn key={title} delay={i*.05}><motion.article whileHover={{y:-8}} className={`group relative min-h-[320px] overflow-hidden rounded-[2rem] p-8 shadow-[0_4px_80px_rgba(0,0,0,.06)] ${dark?"bg-[#05090e] text-white":blue?"bg-[#1e7de5] text-white":"bg-white text-[#1d1d1d]"}`}>

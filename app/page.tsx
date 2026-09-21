@@ -1,9 +1,8 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import StatsBar from "./components/StatsBar";
-import LMSPreview from "./components/LMSPreview";
+import TrainingPath from "./components/TrainingPath";
 import Features from "./components/Features";
-import StudentCases from "./components/StudentCases";
 import OlympiadCountdown from "./components/OlympiadCountdown";
 import Pricing from "./components/Pricing";
 import FAQ from "./components/FAQ";
@@ -16,9 +15,8 @@ export default function Home() {
       <Header />
       <Hero />
       <StatsBar />
-      <LMSPreview />
+      <TrainingPath />
       <Features />
-      <StudentCases />
       <OlympiadCountdown />
       <Pricing />
       <FAQ />
