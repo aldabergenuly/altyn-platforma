@@ -3,7 +3,7 @@
 :root{--background:#f1f2f4;--foreground:#1d1d1d;--blue:#2eb9eb;--deep-blue:#1e7de5;--gold:#eab308}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:112px}
-body{margin:0;background:var(--background);color:var(--foreground);font-family:"Avenir Next","Montserrat","Inter",Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--background);color:var(--foreground);font-family:"Manrope Variable","Manrope",Arial,sans-serif;font-feature-settings:"kern","locl";-webkit-font-smoothing:antialiased}
 button,a,input,select{font:inherit}button,a{-webkit-tap-highlight-color:transparent}a{text-decoration:none}
 .site-container{width:min(1180px,calc(100% - 40px));margin-inline:auto}
 .section-space{padding-block:108px}
@@ -18,24 +18,21 @@ button,a,input,select{font:inherit}button,a{-webkit-tap-highlight-color:transpar
 .form-label{display:block;color:#334155;font-size:.7rem;font-weight:800}
 .form-input{margin-top:.65rem;width:100%;border:1px solid transparent;border-radius:1.25rem;background:#f1f2f4;padding:1rem 1.1rem;color:#0f172a;outline:none;transition:all .2s}
 .form-input:focus{border-color:#2eb9eb;background:white;box-shadow:0 0 0 4px #e4f5fd}
-.hero-chip{position:absolute;z-index:5;display:flex;align-items:center;gap:.75rem;border:1px solid #bae6fd;border-radius:1.5rem;background:rgba(255,255,255,.94);padding:.9rem 1.15rem;box-shadow:0 18px 55px rgba(15,23,42,.11);backdrop-filter:blur(14px)}
-.hero-chip div{display:flex;flex-direction:column}.hero-chip b{font-size:.74rem;color:#1d1d1d}.hero-chip small{margin-top:.18rem;font-size:.58rem;color:#64748b}
 .hero-marquee-shell{position:relative;height:460px;overflow:hidden;padding-top:14px;perspective:800px}
 .hero-marquee-track{display:flex;width:max-content;align-items:flex-end;gap:8px;animation:hero-marquee 25s linear infinite;will-change:transform}
 .hero-marquee-track:hover{animation-play-state:paused}
-.hero-coach-card{position:relative;width:250px;height:420px;flex:none;overflow:hidden;border:0;border-radius:30px 30px 22px 22px;background-color:#dff4ff;background-image:url('/coaches-v1.jpg');background-repeat:no-repeat;background-size:400% auto;box-shadow:0 18px 50px rgba(15,23,42,.08);cursor:pointer;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.22,1,.36,1),filter .5s,box-shadow .5s;will-change:transform}
+.hero-coach-card{position:relative;width:250px;height:420px;flex:none;overflow:hidden;border:0;border-radius:30px 30px 22px 22px;background-color:#dff4ff;background-repeat:no-repeat;background-position:center top;background-size:cover;box-shadow:0 18px 50px rgba(15,23,42,.08);cursor:pointer;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.22,1,.36,1),filter .5s,box-shadow .5s;will-change:transform}
 .hero-coach-card:after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(180deg,transparent 58%,rgba(7,20,38,.72));pointer-events:none}
-.coach-card-label{position:absolute;z-index:2;right:18px;bottom:20px;left:18px;display:flex;align-items:flex-end;justify-content:space-between;color:white;text-align:left}.coach-card-label b{font-size:.92rem}.coach-card-label small{font-size:.58rem;color:rgba(255,255,255,.72)}
+.coach-card-label{position:absolute;z-index:2;right:18px;bottom:20px;left:18px;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;color:white;text-align:left}.coach-card-label>span{display:flex;min-width:0;flex-direction:column}.coach-card-label b{font-size:.86rem}.coach-card-label small{margin-top:2px;font-size:.58rem;color:rgba(255,255,255,.76)}
 .hero-tilt-left{transform:rotateY(6deg) rotate(-1.2deg)}
 .hero-tilt-right{transform:rotateY(-6deg) rotate(1.2deg)}
 .hero-coach-card:hover,.hero-coach-card:focus-visible{z-index:10;outline:0;transform:scale(1.1) rotateY(0) rotate(0);box-shadow:0 25px 65px rgba(15,23,42,.16);filter:saturate(1.05)}
 @keyframes hero-marquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(calc(-50% - 4px),0,0)}}
-.coach-modal-portrait,.coach-contact-portrait{background-color:#dff4ff;background-image:url('/coaches-v1.jpg');background-repeat:no-repeat;background-size:400% auto}
-.coach-modal-portrait{background-position-y:32%}
-.coach-contact-portrait{background-position:100% 24%;background-color:#e4dcfa}
+.coach-modal-portrait,.coach-contact-portrait{background-color:#dff4ff;background-repeat:no-repeat;background-position:center top;background-size:cover}
+.coach-contact-portrait{background-image:url('/alisher-qaztayev.jpg');background-position:center top}
 .juz-panel{border-radius:2rem;background:white;box-shadow:0 4px 80px rgba(0,0,0,.05)}
 .juz-dark-cta{border-radius:2rem;background:linear-gradient(120deg,#05090e,#153851);box-shadow:0 24px 65px rgba(15,23,42,.2)}
-@media(max-width:900px){.hero-chip{padding:.65rem .75rem}.hero-chip b{font-size:.62rem}.hero-marquee-shell{height:405px}.hero-coach-card{width:215px;height:365px}}
+@media(max-width:900px){.hero-marquee-shell{height:405px}.hero-coach-card{width:215px;height:365px}}
 @media(max-width:767px){.section-space{padding-block:78px}.site-container{width:min(100% - 28px,680px)}}
-@media(max-width:600px){.hero-chip{display:none}.site-container{width:min(100% - 22px,680px)}.hero-marquee-shell{height:350px}.hero-coach-card{width:180px;height:310px;border-radius:24px}.hero-marquee-track{animation-duration:20s}.coach-modal-portrait,.coach-contact-portrait{background-size:400% auto}}
+@media(max-width:600px){.site-container{width:min(100% - 22px,680px)}.hero-marquee-shell{height:350px}.hero-coach-card{width:180px;height:310px;border-radius:24px}.hero-marquee-track{animation-duration:20s}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
