@@ -54,7 +54,7 @@ export default function Hero() {
     </motion.div>
 
     <motion.div initial={{opacity:0,y:32}} animate={{opacity:1,y:0}} transition={{duration:.8,delay:.15,ease}} className="site-container relative mx-auto -mt-3 max-w-5xl text-center">
-      <h1 className="text-[2.75rem] font-semibold leading-[1.04] tracking-[-.055em] text-[#1d1d1d] sm:text-6xl lg:text-[4.75rem]">8 аптада <span className="text-[#2eb9eb]">олимпиадалық ойлауыңды</span> жүйеле.</h1>
+      <h1 className="text-[2.35rem] font-bold leading-[1.08] tracking-[-.035em] text-[#1d1d1d] sm:text-6xl sm:tracking-[-.045em] lg:text-[4.75rem]">8 аптада <span className="text-[#2eb9eb]">олимпиадалық ойлауыңды</span> жүйеле.</h1>
       <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-500 sm:text-lg">30+ дәріс, 30 практикалық блок, 8 срез және республикалық олимпиада жүлдегерлерімен апталық live-практика.</p>
       <div className="juz-dark-cta mx-auto mt-9 flex max-w-3xl flex-col items-center gap-4 p-4 sm:flex-row sm:p-5"><a href="#contact" className="flex min-h-14 flex-1 items-center justify-center gap-2 rounded-[1.25rem] bg-[#2eb9eb] px-7 text-sm font-black text-white shadow-[0_0_28px_rgba(46,185,235,.35)]">Интенсивке жазылу <ArrowRight size={18}/></a><a href="#intensive" className="flex flex-1 items-center justify-center gap-3 px-5 py-3 text-sm font-bold text-white"><BookOpenCheck size={17}/> Жүйені көру</a></div>
     </motion.div>

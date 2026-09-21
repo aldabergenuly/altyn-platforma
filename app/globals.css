@@ -3,7 +3,7 @@
 :root{--background:#f1f2f4;--foreground:#1d1d1d;--blue:#2eb9eb;--deep-blue:#1e7de5;--gold:#eab308}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:112px}
-body{margin:0;background:var(--background);color:var(--foreground);font-family:"Manrope Variable","Manrope",Arial,sans-serif;font-feature-settings:"kern","locl";-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--background);color:var(--foreground);font-family:"Noto Sans Variable","Noto Sans",Arial,sans-serif;font-feature-settings:"kern","locl";font-optical-sizing:auto;-webkit-font-smoothing:antialiased}
 button,a,input,select{font:inherit}button,a{-webkit-tap-highlight-color:transparent}a{text-decoration:none}
 .site-container{width:min(1180px,calc(100% - 40px));margin-inline:auto}
 .section-space{padding-block:108px}
@@ -33,6 +33,6 @@ button,a,input,select{font:inherit}button,a{-webkit-tap-highlight-color:transpar
 .juz-panel{border-radius:2rem;background:white;box-shadow:0 4px 80px rgba(0,0,0,.05)}
 .juz-dark-cta{border-radius:2rem;background:linear-gradient(120deg,#05090e,#153851);box-shadow:0 24px 65px rgba(15,23,42,.2)}
 @media(max-width:900px){.hero-marquee-shell{height:405px}.hero-coach-card{width:215px;height:365px}}
-@media(max-width:767px){.section-space{padding-block:78px}.site-container{width:min(100% - 28px,680px)}}
-@media(max-width:600px){.site-container{width:min(100% - 22px,680px)}.hero-marquee-shell{height:350px}.hero-coach-card{width:180px;height:310px;border-radius:24px}.hero-marquee-track{animation-duration:20s}}
+@media(max-width:767px){html{scroll-padding-top:92px}.section-space{padding-block:64px}.site-container{width:min(100% - 28px,680px)}}
+@media(max-width:600px){.site-container{width:min(100% - 22px,680px)}.hero-marquee-shell{height:318px}.hero-coach-card{width:168px;height:286px;border-radius:22px}.hero-marquee-track{animation-duration:20s}.coach-card-label{right:14px;bottom:15px;left:14px}.coach-card-label b{font-size:.78rem}.coach-card-label small{font-size:.58rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation-duration:.01ms!important;transition-duration:.01ms!important}}

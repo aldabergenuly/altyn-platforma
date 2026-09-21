@@ -19,9 +19,9 @@ export function Logo({ light = false }: { light?: boolean }) {
 
 export function SectionHeading({ title, accent, description, centered = true }: { eyebrow: string; title: string; accent: string; description: string; centered?: boolean }) {
   return (
-    <FadeIn className={centered ? "mx-auto mb-14 max-w-3xl text-center" : "mb-12 max-w-2xl"}>
-      <h2 className="text-4xl font-semibold tracking-[-0.045em] text-slate-900 sm:text-5xl">{title} <span className="text-blue-600">{accent}</span></h2>
-      <p className={`mt-5 text-base leading-7 text-slate-600 ${centered ? "mx-auto max-w-2xl" : ""}`}>{description}</p>
+    <FadeIn className={centered ? "mx-auto mb-10 max-w-3xl text-center sm:mb-14" : "mb-9 max-w-2xl sm:mb-12"}>
+      <h2 className="text-[2rem] font-bold leading-[1.16] tracking-[-0.025em] text-slate-900 sm:text-5xl sm:leading-[1.12]">{title} <span className="text-blue-600">{accent}</span></h2>
+      <p className={`mt-4 text-sm leading-6 text-slate-600 sm:mt-5 sm:text-base sm:leading-7 ${centered ? "mx-auto max-w-2xl" : ""}`}>{description}</p>
     </FadeIn>
   );
 }
