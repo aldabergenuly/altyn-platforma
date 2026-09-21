@@ -23,7 +23,7 @@ button,a,input,select{font:inherit}button,a{-webkit-tap-highlight-color:transpar
 .hero-marquee-track:hover{animation-play-state:paused}
 .hero-coach-card{position:relative;width:250px;height:420px;flex:none;overflow:hidden;border:0;border-radius:30px 30px 22px 22px;background-color:#dff4ff;background-repeat:no-repeat;background-position:center top;background-size:cover;box-shadow:0 18px 50px rgba(15,23,42,.08);cursor:pointer;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.22,1,.36,1),filter .5s,box-shadow .5s;will-change:transform}
 .hero-coach-card:after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(180deg,transparent 58%,rgba(7,20,38,.72));pointer-events:none}
-.coach-card-label{position:absolute;z-index:2;right:18px;bottom:20px;left:18px;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;color:white;text-align:left}.coach-card-label>span{display:flex;min-width:0;flex-direction:column}.coach-card-label b{font-size:.86rem}.coach-card-label small{margin-top:2px;font-size:.58rem;color:rgba(255,255,255,.76)}
+.coach-card-label{position:absolute;z-index:2;right:18px;bottom:20px;left:18px;display:flex;color:white;text-align:left}.coach-card-label>span{display:flex;min-width:0;flex-direction:column}.coach-card-label b{font-size:.9rem;line-height:1.25}.coach-card-label small{margin-top:4px;font-size:.65rem;color:rgba(255,255,255,.78)}
 .hero-tilt-left{transform:rotateY(6deg) rotate(-1.2deg)}
 .hero-tilt-right{transform:rotateY(-6deg) rotate(1.2deg)}
 .hero-coach-card:hover,.hero-coach-card:focus-visible{z-index:10;outline:0;transform:scale(1.1) rotateY(0) rotate(0);box-shadow:0 25px 65px rgba(15,23,42,.16);filter:saturate(1.05)}
