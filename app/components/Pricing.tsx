@@ -96,7 +96,7 @@ export default function Pricing() {
 
     <AnimatePresence mode="wait">
       <motion.div id="subject-programs" role="tabpanel" key={active.id} initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: .35, ease }} className="mt-12">
-        <div className="mb-7 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between"><div><p className="text-sm font-extrabold text-blue-600">{active.name}</p><h3 className="mt-2 text-3xl font-semibold tracking-[-.04em] text-slate-900">Дайындық бағдарламалары</h3></div><p className="max-w-md text-sm leading-6 text-slate-500">Алдымен фундаментті таңдауға болады. Маманданған модульдер кезең-кезеңімен ашылады.</p></div>
+        <div className="mb-7"><p className="text-sm font-extrabold text-blue-600">{active.name}</p><h3 className="mt-2 text-3xl font-semibold tracking-[-.04em] text-slate-900">Дайындық бағдарламалары</h3></div>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">{active.programs.map((program, index) => <ProgramCard key={program.name} program={program} index={index}/>)}</div>
       </motion.div>
     </AnimatePresence>
