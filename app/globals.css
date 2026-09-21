@@ -3,7 +3,7 @@
 :root{--background:#f1f2f4;--foreground:#1d1d1d;--blue:#2eb9eb;--deep-blue:#1e7de5;--gold:#eab308}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:112px}
-body{margin:0;background:var(--background);color:var(--foreground);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--background);color:var(--foreground);font-family:"Avenir Next","Montserrat","Inter",Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
 button,a,input,select{font:inherit}button,a{-webkit-tap-highlight-color:transparent}a{text-decoration:none}
 .site-container{width:min(1180px,calc(100% - 40px));margin-inline:auto}
 .section-space{padding-block:108px}
@@ -20,6 +20,15 @@ button,a,input,select{font:inherit}button,a{-webkit-tap-highlight-color:transpar
 .form-input:focus{border-color:#2eb9eb;background:white;box-shadow:0 0 0 4px #e4f5fd}
 .hero-chip{position:absolute;z-index:5;display:flex;align-items:center;gap:.75rem;border:1px solid #bae6fd;border-radius:1.5rem;background:rgba(255,255,255,.94);padding:.9rem 1.15rem;box-shadow:0 18px 55px rgba(15,23,42,.11);backdrop-filter:blur(14px)}
 .hero-chip div{display:flex;flex-direction:column}.hero-chip b{font-size:.74rem;color:#1d1d1d}.hero-chip small{margin-top:.18rem;font-size:.58rem;color:#64748b}
+.hero-marquee-shell{position:relative;height:460px;overflow:hidden;padding-top:14px;perspective:800px}
+.hero-marquee-track{display:flex;width:max-content;align-items:flex-end;gap:8px;animation:hero-marquee 25s linear infinite;will-change:transform}
+.hero-marquee-track:hover{animation-play-state:paused}
+.hero-student-card{position:relative;width:250px;height:420px;flex:none;border-radius:30px 30px 22px 22px;background-image:url('/student-contact-sheet.jpg');background-repeat:no-repeat;background-size:auto 122%;box-shadow:0 18px 50px rgba(15,23,42,.08);transform-style:preserve-3d;transition:transform .8s cubic-bezier(.22,1,.36,1),filter .5s,box-shadow .5s;will-change:transform}
+.hero-student-card:after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(180deg,transparent 68%,rgba(241,242,244,.18));pointer-events:none}
+.hero-tilt-left{transform:rotateY(6deg) rotate(-1.2deg)}
+.hero-tilt-right{transform:rotateY(-6deg) rotate(1.2deg)}
+.hero-student-card:hover{z-index:10;transform:scale(1.1) rotateY(0) rotate(0);box-shadow:0 25px 65px rgba(15,23,42,.16);filter:saturate(1.05)}
+@keyframes hero-marquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(calc(-50% - 4px),0,0)}}
 .platform-stage{position:relative;margin:0 auto;max-width:1080px;padding:0 42px 62px}
 .platform-screen{position:relative;z-index:2;overflow:hidden;border:10px solid #05090e;border-bottom-width:20px;border-radius:1.9rem;background:white;box-shadow:0 38px 100px rgba(15,23,42,.20)}
 .platform-base{position:absolute;z-index:1;bottom:14px;left:4%;width:92%;height:58px;border-radius:0 0 50% 50%;background:linear-gradient(180deg,#d7dce3,#6b7280);clip-path:polygon(9% 0,91% 0,100% 70%,88% 100%,12% 100%,0 70%)}
@@ -28,11 +37,12 @@ button,a,input,select{font:inherit}button,a{-webkit-tap-highlight-color:transpar
 .atom-visual{position:relative;display:grid;width:145px;height:145px;place-items:center;border:2px solid #7dd3fc;border-radius:50%;color:#1e7de5}
 .atom-visual:before,.atom-visual:after{content:"";position:absolute;inset:18px;border:1px solid #38bdf8;border-radius:50%;transform:rotate(60deg)}
 .atom-visual:after{transform:rotate(-60deg)}.atom-visual span{font-size:1.2rem;font-weight:900}
-.student-strip-crop{position:absolute;height:100%;width:500%;max-width:none;object-fit:cover}
-.student-contact-photo{position:absolute;height:100%;width:500%;max-width:none;object-fit:cover;object-position:75% center;transform:translateX(-60%)}
+.student-result-portrait,.student-contact-portrait{background-image:url('/student-contact-sheet.jpg');background-repeat:no-repeat;background-color:#dff4ff}
+.student-result-portrait{background-size:400% auto;background-position-y:25%}
+.student-contact-portrait{background-size:400% auto;background-position:100% 22%;background-color:#e4dcfa}
 .juz-panel{border-radius:2rem;background:white;box-shadow:0 4px 80px rgba(0,0,0,.05)}
 .juz-dark-cta{border-radius:2rem;background:linear-gradient(120deg,#05090e,#153851);box-shadow:0 24px 65px rgba(15,23,42,.2)}
-@media(max-width:900px){.platform-stage{padding-inline:0}.platform-float{display:none}.hero-chip{padding:.65rem .75rem}.hero-chip b{font-size:.62rem}}
+@media(max-width:900px){.platform-stage{padding-inline:0}.platform-float{display:none}.hero-chip{padding:.65rem .75rem}.hero-chip b{font-size:.62rem}.hero-marquee-shell{height:405px}.hero-student-card{width:215px;height:365px}}
 @media(max-width:767px){.section-space{padding-block:78px}.site-container{width:min(100% - 28px,680px)}}
-@media(max-width:600px){.hero-chip{display:none}.platform-screen{border-width:5px;border-bottom-width:11px}.site-container{width:min(100% - 22px,680px)}}
+@media(max-width:600px){.hero-chip{display:none}.platform-screen{border-width:5px;border-bottom-width:11px}.site-container{width:min(100% - 22px,680px)}.hero-marquee-shell{height:350px}.hero-student-card{width:180px;height:310px;border-radius:24px}.hero-marquee-track{animation-duration:20s}.student-result-portrait,.student-contact-portrait{background-size:400% auto}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
