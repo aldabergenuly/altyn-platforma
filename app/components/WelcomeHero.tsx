@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { ArrowDownRight, ArrowRight, Medal, Sparkles, Target, Trophy } from "lucide-react";
 import { ease } from "./shared";
 
@@ -16,8 +15,7 @@ export default function WelcomeHero() {
     <div className="pointer-events-none absolute -left-28 top-28 size-72 rounded-full bg-sky-100/70 blur-3xl" />
     <div className="site-container relative grid min-h-[650px] items-center gap-12 lg:grid-cols-[1.03fr_.97fr] lg:gap-8">
       <motion.div initial={{opacity:0,y:28}} animate={{opacity:1,y:0}} transition={{duration:.75,ease}} className="relative z-10 max-w-3xl text-center lg:text-left">
-        <p className="text-xs font-bold tracking-[.16em] text-blue-600 sm:text-sm">ALTYN OLYMPIAD SCHOOL</p>
-        <h1 className="mt-5 text-[2.7rem] font-semibold leading-[1.01] tracking-[-.055em] text-slate-950 sm:text-6xl lg:text-[4.6rem]">
+        <h1 className="text-[2.7rem] font-semibold leading-[1.01] tracking-[-.055em] text-slate-950 sm:text-6xl lg:text-[4.6rem]">
           Жеңіс кездейсоқ келмейді. <span className="gradient-text">Оған жүйелі дайындалады.</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-500 sm:text-lg sm:leading-8 lg:mx-0">
@@ -39,7 +37,9 @@ export default function WelcomeHero() {
           <div className="absolute left-7 top-7 flex items-center gap-2 text-[10px] font-bold tracking-[.12em] text-blue-100 sm:text-xs"><Sparkles size={15}/> ОЛИМПИАДАЛЫҚ ОЙЛАУ</div>
         </div>
 
-        <Image src="/olympiad-student-v1.png" alt="ALTYN School олимпиадаға дайындалып жатқан оқушы" width={1024} height={1536} priority className="absolute bottom-[2%] left-1/2 z-10 h-[94%] w-auto max-w-none -translate-x-1/2 object-contain drop-shadow-[0_28px_35px_rgba(15,23,42,.25)]" />
+        {/* Static public asset: direct loading keeps it compatible with the preview and deployment runtime. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/olympiad-student-v1.png" alt="ALTYN School олимпиадаға дайындалып жатқан оқушы" width="1024" height="1536" fetchPriority="high" className="absolute bottom-[2%] left-1/2 z-10 h-[94%] w-auto max-w-none -translate-x-1/2 object-contain drop-shadow-[0_28px_35px_rgba(15,23,42,.25)]" />
 
         <motion.div whileHover={{y:-5}} className="absolute left-0 top-[23%] z-20 flex max-w-[185px] items-center gap-3 rounded-2xl border border-white/70 bg-white/95 p-3 shadow-[0_18px_45px_rgba(15,23,42,.14)] backdrop-blur sm:max-w-[220px] sm:p-4">
           <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-amber-50 text-amber-500"><Trophy size={20}/></span><span><b className="block text-xs text-slate-900 sm:text-sm">Республикалық деңгей</b><small className="mt-1 block text-[9px] text-slate-500 sm:text-[10px]">мақсатқа бағытталған жүйе</small></span>
