@@ -14,10 +14,11 @@ test("server-renders the ALTYN coach-led landing", async () => {
   assert.match(response.headers.get("content-type")??"",/^text\/html\b/i);
   const html = await response.text();
   assert.match(html,/<title>ALTYN School — Олимпиадаға жүйелі дайындық<\/title>/i);
-  assert.match(html,/Күшті тренермен/);
+  assert.match(html,/8 аптада/);
   assert.match(html,/Тренерлер/);
-  assert.match(html,/ДАЙЫНДЫҚ ЖҮЙЕСІ/);
-  assert.match(html,/Тегін диагностика/);
+  assert.match(html,/30\+ академиялық дәріс/);
+  assert.match(html,/8 апталық срез/);
+  assert.match(html,/Guest Lectures &amp; Tea Time/);
 });
 
 test("does not advertise unavailable products or graduate proof", async () => {

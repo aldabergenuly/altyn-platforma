@@ -11,13 +11,8 @@ export function FadeIn({ children, className = "", delay = 0 }: { children: Reac
 
 export function Logo({ light = false }: { light?: boolean }) {
   return (
-    <a href="#top" className="group inline-flex min-w-[9.5rem] flex-col leading-none" aria-label="ALTYN Olympiad School басты бет">
-      <b className="text-[1.65rem] font-black tracking-[0.09em] text-amber-500 transition-colors duration-300 group-hover:text-amber-400">ALTYN</b>
-      <span className={`mt-1 flex items-center gap-1.5 text-[7px] font-extrabold tracking-[0.16em] ${light ? "text-slate-300" : "text-slate-700"}`}>
-        <span>OLYMPIAD</span>
-        <span className={`h-px w-5 ${light ? "bg-slate-500" : "bg-slate-400"}`} aria-hidden="true" />
-        <span>SCHOOL</span>
-      </span>
+    <a href="#top" className={`inline-flex shrink-0 items-center overflow-hidden ${light ? "rounded-xl bg-white px-3 py-2" : ""}`} aria-label="ALTYN Olympiad School басты бет">
+      <img src="/altyn-logo.jpg" alt="ALTYN olympiad school" className="h-auto w-[135px] object-contain sm:w-[150px]" />
     </a>
   );
 }
