@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Logo } from "./shared";
 
-const links = [["Тренерлер", "#coaches"], ["Интенсив", "#intensive"], ["Бағдарлама", "#program"], ["Оқу форматы", "#pricing"]];
+const links = [["Тренерлер", "#coaches"], ["Интенсив", "#intensive"], ["Бағдарлама", "#program"], ["Бағыттар", "#pricing"]];
 
 export default function Header() {
   const [open, setOpen] = useState(false);

@@ -16,9 +16,13 @@ test("server-renders the ALTYN coach-led landing", async () => {
   assert.match(html,/<title>ALTYN School — Олимпиадаға жүйелі дайындық<\/title>/i);
   assert.match(html,/8 аптада/);
   assert.match(html,/Тренерлер/);
-  assert.match(html,/30\+ академиялық дәріс/);
-  assert.match(html,/8 апталық срез/);
+  assert.match(html,/30\+[\s\S]*академиялық дәріс/);
+  assert.match(html,/8[\s\S]*апталық срез/);
   assert.match(html,/Guest Lectures &amp; Tea Time/);
+  assert.match(html,/Дайындық.*бағытын таңда/);
+  assert.match(html,/Фундамент/);
+  assert.match(html,/35 000/);
+  assert.match(html,/Жаңа топ 1 қазанда басталады/);
 });
 
 test("does not advertise unavailable products or graduate proof", async () => {
