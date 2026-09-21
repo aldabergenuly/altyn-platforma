@@ -4,19 +4,13 @@ import { motion } from "framer-motion";
 import { ArrowDownRight, ArrowRight, Medal, Sparkles, Target, Trophy } from "lucide-react";
 import { ease } from "./shared";
 
-const values = [
-  ["30+", "академиялық дәріс"],
-  ["30", "практикалық блок"],
-  ["8", "апталық срез"],
-];
-
 export default function WelcomeHero() {
-  return <section className="relative overflow-hidden bg-white pb-16 pt-32 sm:pb-24 sm:pt-40">
+  return <section className="relative overflow-hidden bg-[linear-gradient(135deg,#ffffff_0%,#f5fbff_58%,#fff9df_100%)] pb-16 pt-32 sm:pb-24 sm:pt-40">
     <div className="pointer-events-none absolute -left-28 top-28 size-72 rounded-full bg-sky-100/70 blur-3xl" />
     <div className="site-container relative grid min-h-[650px] items-center gap-12 lg:grid-cols-[1.03fr_.97fr] lg:gap-8">
       <motion.div initial={{opacity:0,y:28}} animate={{opacity:1,y:0}} transition={{duration:.75,ease}} className="relative z-10 max-w-3xl text-center lg:text-left">
-        <h1 className="text-[2.7rem] font-semibold leading-[1.01] tracking-[-.055em] text-slate-950 sm:text-6xl lg:text-[4.6rem]">
-          Жеңіс кездейсоқ келмейді. <span className="gradient-text">Оған жүйелі дайындалады.</span>
+        <h1 className="text-[2.7rem] font-semibold leading-[1.01] tracking-[-.055em] text-[#12358f] sm:text-6xl lg:text-[4.6rem]">
+          Жеңіс кездейсоқ келмейді. <span className="bg-gradient-to-r from-[#00aef3] to-[#2563eb] bg-clip-text text-transparent">Оған жүйелі дайындалады.</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-500 sm:text-lg sm:leading-8 lg:mx-0">
           ALTYN School — республикалық олимпиадаға апаратын нақты жүйе: мықты тренер, тұрақты практика, апталық срез және әр қатеге берілетін кері байланыс.
@@ -24,9 +18,6 @@ export default function WelcomeHero() {
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
           <a href="#pricing" className="primary-button min-h-14 px-7">Бағытыңды таңда <ArrowRight size={18}/></a>
           <a href="#program" className="secondary-button min-h-14 px-7">Дайындық жүйесі <ArrowDownRight size={18}/></a>
-        </div>
-        <div className="mt-10 grid grid-cols-3 gap-2 border-t border-slate-200 pt-6 sm:max-w-2xl sm:gap-5">
-          {values.map(([value,label]) => <div key={label} className="text-left"><strong className="block text-xl font-semibold text-slate-950 sm:text-3xl">{value}</strong><span className="mt-1 block text-[10px] leading-4 text-slate-500 sm:text-xs">{label}</span></div>)}
         </div>
       </motion.div>
 
